@@ -5,8 +5,7 @@ def nyc_pigeon_organizer(data)
   data.each do |attribute, att_info|
     att_info.each do |type, pigeons|
       pigeons.each do |pigeon|
-        pigeon_list[pigeon][attribute] << type
-        binding.pry
+        pigeon_list[pigeon][attribute] += [type]
       end
     end
   end
