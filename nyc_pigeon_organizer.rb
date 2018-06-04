@@ -7,9 +7,9 @@ def nyc_pigeon_organizer(data)
       pigeons.each do |pigeon|
         if pigeon_list.include?(pigeon)
           if pigeon_list[pigeon].include?(attribute)
-            pigeon_list[pigeon][attribute] << [type]
+            pigeon_list[pigeon][attribute] << [type.to_s]
           else
-            pigeon_list[pigeon][attribute] = [type]
+            pigeon_list[pigeon][attribute] = [type.to_s]
           end
         else
           pigeon_list[pigeon] = {}
