@@ -12,7 +12,7 @@ def nyc_pigeon_organizer(data)
             pigeon_list[pigeon][attribute] = [type.to_s]
           end
         else
-          pigeon_list[pigeon] = {attribute => type.to_s}
+          pigeon_list[pigeon] = {attribute => [type.to_s]}
         end
       end
     end
