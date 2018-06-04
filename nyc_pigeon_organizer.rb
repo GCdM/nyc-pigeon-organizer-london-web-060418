@@ -8,12 +8,11 @@ def nyc_pigeon_organizer(data)
         if pigeon_list.include?(pigeon)
           if pigeon_list[pigeon].include?(attribute)
             pigeon_list[pigeon][attribute] << type.to_s
-            binding.pry
           else
             pigeon_list[pigeon][attribute] = [type.to_s]
           end
         else
-          pigeon_list[pigeon] = {}
+          pigeon_list[pigeon] = {attribute => type.to_s}
         end
       end
     end
